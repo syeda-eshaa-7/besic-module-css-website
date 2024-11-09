@@ -1,0 +1,171 @@
+/* .driver {
+    max-width: 1040px;
+    margin: auto;
+    padding:  1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.driver img {
+    max-width: 512px;
+}
+
+
+.driver h2 {
+    padding-top: 30%;
+}
+
+.driver span {
+    color: #08041b;
+}
+
+.driver p {
+    font-size: 1rem;
+    color: #333;
+    padding: 1.5rem 0;
+}
+
+.driver button {
+    background-color: #593cfb;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px 18px;
+    border: none;
+}
+
+.driver button:hover {
+    background-color: #4733b7;
+    transition: background-color 1s;
+}
+
+@media screen and (max-width: 920px) {
+    .driver {
+        grid-template-columns: 1fr;
+    }
+
+    .driver img {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .driver .left {
+        display: flex;
+        justify-content: center;
+    }
+
+    .driver h2 {
+        padding-top: 10%;
+    }
+} */
+
+.driver {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: zoomIn 1s ease-in-out;
+  }
+  
+  .image {
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Right section with text styling */
+  .right {
+    flex: 1;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .highlight {
+    color: #593cfb;
+  }
+  
+  .description {
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 1.2s ease-out;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #593cfb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    animation: fadeIn 1.4s ease-out;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #4733b7;
+    transform: scale(1.05);
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .driver {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .heading {
+      font-size: 2rem;
+    }
+  
+    .description {
+      font-size: 1rem;
+    }
+  }
+  

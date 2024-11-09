@@ -1,0 +1,105 @@
+.find {
+  padding: 2rem;
+  background-color: #f5f5f5;
+  text-align: center;
+  color: #333;
+}
+
+.heading h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.heading p {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(89, 60, 251, 0.8), rgba(36, 24, 121, 0.8));
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.text_bg p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: -0.6rem; /* Adjusted for better positioning */
+  color: #fff;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 1rem; /* Spacing between items */
+  justify-items: center; /* Centers the cards horizontally */
+  align-items: center; /* Ensures vertical centering */
+  margin-top: 2rem;
+}
+
+.card {
+  margin: 0.2rem;
+  border-radius: 15px; /* Adjusted for smoother corners */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px; /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Prevents images from overflowing */
+  width: 100%;
+  max-width: 350px; /* Limiting card width */
+  text-align: center; /* Ensures text inside the card is centered */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px; /* Darker shadow on hover */
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card p {
+  padding: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem; /* Adding padding to the card */
+  }
+  .heading p {
+    font-size: 1rem; /* Adjust font size for small screens */
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

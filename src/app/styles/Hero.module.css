@@ -1,0 +1,179 @@
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background image styling */
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image:hover {
+  opacity: 0.9;
+}
+
+/* Text container for heading and paragraph */
+.textContainer {
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  animation: fadeInDown 1.2s ease-out;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(48, 45, 45);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  animation: fadeInUp 1.4s ease-in-out;
+}
+
+.subHeading {
+  font-size: 1.5rem;
+  color: rgb(17, 14, 14);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 1.6s ease-in-out;
+}
+
+/* Form styling */
+.form {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 700px;
+  width: 90%;
+  padding: 20px 30px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1.8s ease-in-out;
+}
+
+/* Input and label styling */
+.text, .from, .until {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.text label, .from label, .until label {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.textInput, .dateInput {
+  font-size: 1rem;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s ease;
+}
+
+.textInput:focus, .dateInput:focus {
+  outline: none;
+  border: 1px solid #593cfb;
+  box-shadow: 0px 0px 6px rgba(89, 60, 251, 0.3);
+}
+
+/* Button and icon styling */
+.searchBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  background-color: #593cfb;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #4733b7;
+  transform: scale(1.05);
+}
+
+.icon {
+  color: #593cfb;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: rotate(20deg);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .form {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 15px 20px;
+    width: 90%;
+  }
+
+  .text, .from, .until {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .subHeading {
+    font-size: 1.2rem;
+  }
+}
